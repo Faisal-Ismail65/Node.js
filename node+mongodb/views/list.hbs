@@ -1,0 +1,18 @@
+<h1>Courses</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>CNIC</th>
+        <th>Contact</th>
+        <th>Image</th>
+    </tr>
+    {{each docs}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.cnic}}</td>
+        <td>{{this.Contact}}</td>
+        <td>{{this.img}}</td>
+    </tr>
+    {{/each}}
+</table>
