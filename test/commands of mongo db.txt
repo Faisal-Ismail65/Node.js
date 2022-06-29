@@ -1,0 +1,69 @@
+commands for database
+
+1 :view all databaes
+
+show dbs
+
+2: use or create database
+
+use database_name;
+
+3:  view which database you are using 
+
+db
+
+4: delete database
+
+db.dropDatabase();
+
+commands for collections
+ 
+5: to show collections
+
+show collection
+
+6: create collection 
+
+db.createCollection('name')
+
+7: drop collection
+
+db.name.drop()
+
+
+commands for fields
+
+8: isert one into collections
+db.collection_name.insert({key value pairs})
+
+9: insert many into collections
+db.collection_name.insertMany([{key value pairs},{key value pairs}])
+
+10: show all fields in a collection
+
+db.collection_name.find()
+
+11: show all fields in pretty way
+
+db.collection_name.find().pretty()
+
+
+search commands in mongodb
+
+12: search data in collection
+
+db.collection_name.find({key value pair})
+
+13: limit data 
+
+db.collection_name.find().limit(number);
+
+14: Count data
+
+db.collection_name.find().count()
+
+
+
+
+
+
