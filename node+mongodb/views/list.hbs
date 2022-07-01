@@ -1,17 +1,17 @@
 <h1>Courses</h1>
 
-<table>
+<table style="text-align:center">
     <tr>
         <th>Name</th>
         <th>CNIC</th>
         <th>Contact</th>
         <th>Image</th>
     </tr>
-    {{each docs}}
+    {{#each data}}
     <tr>
-        <td>{{this.name}}</td>
+        <td>{{this.Name}}</td>
         <td>{{this.cnic}}</td>
-        <td>{{this.Contact}}</td>
+        <td>{{this.contact}}</td>
         <td>{{this.img}}</td>
     </tr>
     {{/each}}

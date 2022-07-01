@@ -9,12 +9,14 @@ router.get('/',(req,res)=>{
 });
 
 router.get('/list',(req,res)=>{
-
-    Contact.find((err,data)=>{
+        
+    Contact.find((err,docs)=>{
         if(!err){
-            res.send(data.toString());
+            res.render("list",{data : docs});
+        }else {
+            res.send("error");
         }
-    })
+    }).lean(); 
 });
 router.post('/add',(req,res)=>{
    let newContact = new Contact({
