@@ -7,6 +7,27 @@ const Contact = require('../model/course.model');
 router.get('/',(req,res)=>{
     res.render("index");
 });
+router.get('/add-new',(req,res)=>{
+    res.render("add");
+});
+
+router.post('/add-new',(req,res)=>{
+    // console.log(req.body);    
+    let newContact = Contact({
+        Name : req.body.name,
+        cnic : req.body.cnic,
+        contact : req.body.contact,
+        img: req.body.img
+    });
+    newContact.save((err,contact)=>{
+        if(!err){
+            res.redirect('list');
+        }
+    });
+
+
+    
+});
 
 router.get('/list',(req,res)=>{
         
@@ -32,6 +53,7 @@ router.post('/add',(req,res)=>{
                 res.json({msg: "contact added successfully"});
             }
     });
+    
 });
 
 
